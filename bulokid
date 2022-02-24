@@ -1,0 +1,70 @@
+--Made by Moiiiscake
+
+-- Instances:
+
+local SCRIPT = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local START = Instance.new("TextButton")
+local LEAVE = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+SCRIPT.Name = "SCRIPT"
+SCRIPT.Parent = game.CoreGui
+SCRIPT.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = SCRIPT
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.56003505, 0, 0.40157479, 0)
+Frame.Size = UDim2.new(0, 190, 0, 100)
+Frame.Active = true
+Frame.Draggable = true
+
+
+START.Name = "START"
+START.Parent = Frame
+START.BackgroundColor3 = Color3.fromRGB(131, 255, 237)
+START.Position = UDim2.new(0.0452630296, 0, 0.200000003, 0)
+START.Size = UDim2.new(0, 103, 0, 59)
+START.Font = Enum.Font.SciFi
+START.Text = "START DUPE"
+START.TextColor3 = Color3.fromRGB(0, 0, 0)
+START.TextSize = 14.000
+START.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/moiiisc/new/main/new",true))()
+end)
+
+
+LEAVE.Name = "LEAVE"
+LEAVE.Parent = Frame
+LEAVE.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+LEAVE.Position = UDim2.new(0.652631581, 0, 0.200000003, 0)
+LEAVE.Size = UDim2.new(0, 53, 0, 59)
+LEAVE.Font = Enum.Font.SciFi
+LEAVE.Text = "LEAVE"
+LEAVE.TextColor3 = Color3.fromRGB(0, 0, 0)
+LEAVE.TextSize = 14.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.Position = UDim2.new(0.110526316, 0, -0.150000006, 0)
+TextLabel.Size = UDim2.new(0, 148, 0, 28)
+TextLabel.Font = Enum.Font.SciFi
+TextLabel.Text = "Script Made by Dave Delrosario"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+-- Scripts:
+
+local function AUIEGC_fake_script() -- LEAVE.LocalScript 
+	local script = Instance.new('LocalScript', LEAVE)
+
+	local quitbutton = script.Parent
+	quitbutton.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer:Kick("WAIT MO MAG ERROR BOBO")
+	end)
+end
+coroutine.wrap(AUIEGC_fake_script)()
